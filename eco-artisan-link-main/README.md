@@ -42,7 +42,7 @@ The platform introduces a **dual-track approach**:
 - **State Management:** React Context / Redux (if used)  
 - **Database / Storage:** Firebase Firestore (for user profiles and clustering)  
 - **Deployment:** Firebase Hosting  
-- **Source Code:** [GitHub Repository](https://github.com/varshika2306/eco-artisan-link)
+  - **Source Code:** [GitHub Repository](https://github.com/Raksha-3063/MingleMakers.git)
 
 ---
 
@@ -82,7 +82,7 @@ The platform introduces a **dual-track approach**:
 
 - **Project Name:** MingleMakers  
 
-- **GitHub:** [https://github.com/varshika2306/eco-artisan-link](https://github.com/varshika2306/eco-artisan-link)  
+- **GitHub:** [https://github.com/Raksha-3063](https://github.com/Raksha-3063/MingleMakers.git)  
 
 ---
 
