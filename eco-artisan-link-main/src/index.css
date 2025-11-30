@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* MingleMakers Earthy Color System */
+    --background: 35 30% 96%;
+    --foreground: 0 0% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 18%;
+
+    /* Terracotta Primary */
+    --primary: 14 65% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 14 75% 62%;
+
+    /* Olive Secondary */
+    --secondary: 75 28% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Mint Accent */
+    --accent: 160 45% 65%;
+    --accent-foreground: 0 0% 18%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 14 65% 52%;
+
+    --radius: 1rem;
+
+    /* Sidebar - Warm Beige Theme */
+    --sidebar-background: 35 25% 94%;
+    --sidebar-foreground: 0 0% 18%;
+    --sidebar-primary: 14 65% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 35% 88%;
+    --sidebar-accent-foreground: 0 0% 18%;
+    --sidebar-border: 35 20% 82%;
+    --sidebar-ring: 14 65% 52%;
+
+    /* Custom Design Tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(14 65% 52%), hsl(14 55% 42%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(35 20% 98%));
+    --shadow-soft: 0 4px 20px -2px hsl(14 65% 52% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.12);
+    --shadow-hover: 0 12px 40px -10px hsl(14 65% 52% / 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 12%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 14 65% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 75 28% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 160 45% 65%;
+    --accent-foreground: 0 0% 18%;
+    --muted: 0 0% 22%;
+    --muted-foreground: 0 0% 65%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 14 65% 52%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 14 65% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 14 65% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-hover)];
+  }
+
+  .card-glow {
+    @apply shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hover)] transition-shadow duration-300;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+}
